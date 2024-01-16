@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+
+    <title>Taskive</title>
+  </head>
+  <body>
+    <div>
+      <h1>Taskive</h1>
+
+      <div>
+        <h2>Add Task</h2>
+        <div class="setter">
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="Add items..."
+            maxlength="25" required
+          />
+          <button onclick="myAdd()">Go</button>
+          <button onclick="myClear()">Clear All</button>
+        </div>
+
+        <hr />
+        <div class="output"></div>
+      </div>
+    </div>
+    <script src="code.js"></script>
+  </body>
+</html>
