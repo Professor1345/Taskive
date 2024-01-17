@@ -2,53 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@layer base{
-    h1{
-        @apply bg-violet-600 text-white text-2xl text-center;
-    }
-    h2{
-        @apply text-center;
-    }
-    button{
-        @apply border-violet-800 border border-solid py-1 px-2;
-        @apply hover:bg-violet-800 hover:text-white;
-        @apply mx-1;
-    }
-    
-    
-
+@layer base {
+  h1 {
+    @apply bg-violet-600 p-3 uppercase font-bold text-white text-2xl text-center;
+  }
+  h2 {
+    @apply text-center text-lg;
+  }
+  button {
+    @apply border-violet-800 border border-solid py-1 px-2;
+    @apply hover:bg-violet-800 hover:text-white;
+    @apply mx-1;
+  }
 }
 
-@layer components{
-    #content{
-        @apply border-solid border-[2px] border-blue-600;
-        @apply focus:outline-none;
-        @apply grow-[8];
-    }
-    .setter{
-        @apply flex flex-row;
-        @apply mx-4;
-    }
-    .setter button{
-        @apply grow;
-    }
-    .output{
-        @apply flex flex-col-reverse;
-    }
+@layer components {
+  #content {
+    @apply border-solid border-[2px] border-blue-600;
+    @apply focus:outline-none;
+    @apply grow-[8];
+    @apply py-1 px-2 md:p-2;
+  }
+  .setter {
+    @apply flex flex-row;
+    @apply mx-4;
+  }
+  .setter button {
+    @apply grow;
+  }
+  .output {
+    @apply flex flex-col-reverse;
+  }
 
-    div.datas{
-        @apply mx-4 my-2 bg-slate-300 p-2;
-        @apply flex justify-between;
-        @apply text-[15px] md:text-base;
-    }
+  div.datas {
+    @apply mx-4 my-2 bg-slate-300 p-2;
+    @apply flex justify-between;
+    @apply text-[15px] md:text-base;
+  }
+.date{
+    @apply text-sm md:text-base;
+}
+  .value {
+    @apply self-center font-semibold;
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
 
-    .close-btn{
+  .close-btn {
     @apply border border-solid border-black px-2;
     @apply cursor-pointer;
-    @apply self-end;
+    @apply self-center;
+    @apply hover:bg-slate-800 hover:text-white;
+  }
 
-    }
-
-
+  .nothing{
+    @apply flex justify-center my-3 text-lg;
+  }
 }

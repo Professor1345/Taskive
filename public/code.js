@@ -20,7 +20,10 @@ function myAdd() {
   inputText.value.trim() != ""
     ? ArrText.push({
         value: inputText.value,
-        date: new Date().toLocaleTimeString(),
+        date: [
+          new Date().toLocaleTimeString(),
+          new Date().toLocaleDateString(),
+        ],
         close: "X",
       })
     : null;
@@ -49,10 +52,15 @@ function updateList() {
     // console.log(i);
     outputUl +=
       "<div class='datas'>" +
+      "<div class='date'>" +
       "<div>" +
-      i.date +
+      i.date[0] +
       "</div>" +
       "<div>" +
+      i.date[1] +
+      "</div>" +
+      "</div>" +
+      "<div class = 'value'>" +
       i.value +
       "</div>" +
       "<a class= 'close-btn' data-index= '" +
@@ -63,7 +71,9 @@ function updateList() {
       "</div>";
     index++;
   }
-  Ul.innerHTML = outputUl;
+  outputUl.length == 0
+    ? (Ul.innerHTML = "<div class='nothing'>" + "Nothing To Show..." + "</div>")
+    : (Ul.innerHTML = outputUl);
   closeButton();
 }
 
